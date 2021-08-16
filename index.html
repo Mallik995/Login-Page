@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Registration form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="register">
+            <h2>Register Here....</h2><hr id="hr1">
+            <!-- onsubmit="return login()" -->
+            <form action="" method="get" id="register">
+            <label for="">First Name :</label> <br>
+            <input class ="fname" type="text" name="fname" id="name" placeholder="Enter your First Name...." required>
+            <br><br>
+            <label for="">Last Name :</label><br>
+            <input type="text" name="lname" id="name" placeholder="Enter your Last Name....">
+            <br><br>
+            <label for="">Your Age :</label>
+            <br>
+            <input type="number" name="age" id="name" placeholder="How old are you...?">
+            <br><br>
+            <label for="">Email :</label>
+            <br>
+            <input type="email" name="email" id="name" placeholder="Enter your valid Email-Id ...." value="abc@gmail.com">
+            <br><br>
+            <label for="">Gender :</label>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="gender" id="male" checked>
+            &nbsp;
+            <span id="male">Male</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="gender" id="female">
+            &nbsp;
+            <span id="female">Female</span>
+            <br><br>
+            <label for="">Known Languages :</label>
+            <br>
+            
+            &nbsp;&nbsp;&nbsp
+            <input type="checkbox" name="hindi" id="hindi">
+            
+            <span id="hindi">Hindi</span>
+            &nbsp;&nbsp;&nbsp
+            <input type="checkbox" name="kannada" id="kannada">
+            
+            <span id="kannada">Kannada</span>
+            &nbsp;&nbsp;&nbsp
+            <input type="checkbox" name="english" id="english" checked>
+           
+            <span id="english">English</span>
+            <br><br>
+            <hr width="100%">
+            <br><br>
+            <input type="submit" id="submit" onclick="return login();">
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function login()
+        {            
+            const x=document.getElementsByClassName("fname");          
+
+            if(x[0].value=="")
+            {
+                alert("First Name is not Empty");
+            }
+            else{
+            
+                alert("Successfully registerd !!!"+x[0].value);
+            }                
+        }
+    </script>
+</body>
+</html>
